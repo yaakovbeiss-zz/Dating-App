@@ -4,12 +4,12 @@ import {
   Link,
 } from 'react-router-dom';
 
-import LoginSignUp from './session/LoginSignUp'
+import LoginSignup from './session/LoginSignup'
 
 const App = () => (
 
   <app>
-    <LoginSignUp />
+    <LoginSignup />
   </app>
 
 );

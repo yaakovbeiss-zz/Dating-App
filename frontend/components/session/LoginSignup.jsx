@@ -1,8 +1,8 @@
 import React from 'react';
 import Login from './LoginContainer';
-import SignUp from './SignUpContainer';
+import SignUp from './SignupContainer';
 
-class LoginSignUp extends React.Component {
+class LoginSignup extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -17,4 +17,4 @@ class LoginSignUp extends React.Component {
   }
 }
 
-export default LoginSignUp;
+export default LoginSignup;
