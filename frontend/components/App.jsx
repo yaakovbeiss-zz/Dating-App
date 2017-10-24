@@ -1,16 +1,16 @@
 import React from 'react';
 import {
-  Route,
-  Redirect,
   Switch,
-  Link
+  Link,
 } from 'react-router-dom';
+
+import LoginSignUp from './session/LoginSignUp'
 
 const App = () => (
 
-  <div>
-    
-  </div>
+  <app>
+    <LoginSignUp />
+  </app>
 
 );
 
