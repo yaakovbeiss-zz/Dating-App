@@ -17,14 +17,14 @@ import App from './components/app';
 
   document.addEventListener('DOMContentLoaded', () => {
     let store;
-    // if (window.currentuser) {
-    //   const preloadedState = { session: { currentUser: window.currentuser } };
-    //   store = configureStore(preloadedState);
-    //
-    //   delete window.currentuser;
-    // } else {
+    if (window.currentuser) {
+      const preloadedState = { session: { currentUser: window.currentuser } };
+      store = configureStore(preloadedState);
+
+      delete window.currentuser;
+    } else {
       store = configureStore();
-    // }
+    }
 
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
