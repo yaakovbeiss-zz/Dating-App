@@ -1,0 +1,13 @@
+<div >
+  <ReactCSSTransitionGroup transitionName="example" transitionEnterTimeout={700} transitionLeaveTimeout={700}>
+    {items.map((item) => {
+      return (
+        <div className="container">
+          <div key={item.id} className="todo-item" onClick={this.props.removeItemHandler.bind(null, item)}>
+            {item.name}
+          </div>
+        </div>
+      );
+    })}
+  </ReactCSSTransitionGroup>
+</div>

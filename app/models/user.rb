@@ -9,6 +9,12 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_and_belongs_to_many :friendships,
+      class_name: "User",
+      join_table:  :friendships,
+      foreign_key: :user_id,
+      association_foreign_key: :friend_user_id
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user
