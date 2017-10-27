@@ -1,5 +1,5 @@
 import React from 'react';
-import AddPic from './AddPic';
+import AddPic from './AddPicContainer';
 import AddProfile from './AddProfile';
 
 class TutorialScreens extends React.Component {
