@@ -7,7 +7,7 @@ class AddProfile extends React.Component {
   }
 
   closeTutorial() {
-    this.props.history.push('/FindFriends');
+    this.props.history.push('/Friends');
   }
 
   render() {

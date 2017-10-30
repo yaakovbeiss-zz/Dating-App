@@ -13,7 +13,7 @@ class Api::UserProfileController < ApplicationController
   end
 
   def show
-    @user_profile = current_user.user_profile
+    @user_profile = current_user.user_profile || UserProfile.new()
   end
 
   private
