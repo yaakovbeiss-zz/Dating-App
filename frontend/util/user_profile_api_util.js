@@ -7,3 +7,10 @@ export const createUserProfile = profile => (
     processData: false,
   })
 )
+
+export const fetchUserProfile = id => (
+  $.ajax({
+    method: 'GET',
+    url: `api/user_profile/${id}`
+  })
+)

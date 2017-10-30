@@ -1,6 +1,6 @@
 import React from 'react';
 import AddPic from './AddPicContainer';
-import AddProfile from './AddProfile';
+import AddProfile from './AddProfileContainer';
 
 class TutorialScreens extends React.Component {
   constructor(props) {

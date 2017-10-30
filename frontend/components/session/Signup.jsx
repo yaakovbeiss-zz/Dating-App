@@ -29,7 +29,7 @@ class Signup extends React.Component {
   }
 
   validateEmail() {
-    
+
   }
 
   handleSubmit(e) {

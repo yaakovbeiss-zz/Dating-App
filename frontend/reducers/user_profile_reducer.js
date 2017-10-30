@@ -3,7 +3,7 @@ import merge from 'lodash/merge';
 import { RECEIVE_USER_PROFILE } from '../actions/user_profile_actions';
 
 const defaultState = Object.freeze({
-  entities: {}
+  userProfile: {}
 });
 
 const UserProfileReducer = (state = defaultState, action) => {

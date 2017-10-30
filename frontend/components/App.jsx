@@ -6,7 +6,7 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import LoginSignup from './session/LoginSignup';
-import Welcome from './homepage/Welcome';
+import Welcome from './homepage/WelcomeContainer';
 import Header from './header/HeaderContainer';
 
 const App = () => (

@@ -12,10 +12,14 @@ class Api::UserProfileController < ApplicationController
 
   end
 
+  def show
+    @user_profile = current_user.user_profile
+  end
+
   private
 
   def user_profile_params
-    params.require(:user_profile).permit(:user_id, :image)
+    params.require(:user_profile).permit(:image)
   end
 
 end

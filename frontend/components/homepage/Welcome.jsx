@@ -1,31 +1,30 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import TutorialScreens from '../tutorial/TutorialScreens';
-import AddPic from '../tutorial/AddPic';
 
 class Welcome extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      screens: [AddPic, "two"],
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if ( !nextProps.userProfile.id ) {
+      this.props.history.push('/tutorial');
     }
-
-    this.removeItemHandler = this.removeItemHandler.bind(this)
   }
 
-  screens() {
-    return ( this.state.screens[0] )
-  }
-
-  removeItemHandler() {
-    const newScreens = this.state.screens.slice(1)
-    this.setState({ screens: newScreens })
+  componentDidMount() {
+    this.props.requestUserProfile(this.props.currentUser.id)
   }
 
   render() {
     return (
       <welcome>
         Welcome
-        <TutorialScreens />
+        <Switch>
+          <Route path="/tutorial" component={TutorialScreens} />
+
+        </Switch>
       </welcome>
     )
   }
