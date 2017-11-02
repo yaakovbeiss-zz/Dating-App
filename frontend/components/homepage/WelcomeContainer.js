@@ -4,10 +4,11 @@ import { requestUserProfile } from '../../actions/user_profile_actions';
 import { requestFriendships } from '../../actions/friendship_actions';
 import Welcome from './Welcome';
 
-const mapStateToProps = ({ session, profile }) => {
+const mapStateToProps = ({ session, profile, friendships }) => {
   return {
     currentUser: session.currentUser,
     userProfile: profile.userProfile,
+    friendships: friendships.entities,
   }
 };
 

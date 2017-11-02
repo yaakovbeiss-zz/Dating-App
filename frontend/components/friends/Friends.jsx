@@ -29,7 +29,10 @@ class Friends extends React.Component {
  }
 
  render() {
+   const friends = Object.values(this.props.friends) || [];
+
    return (
+     <div>
      <svg width={this.props.width} height={this.props.height}>
        {this.state.links.map((link, index) =>(
          <line
@@ -43,7 +46,11 @@ class Friends extends React.Component {
        {this.state.nodes.map((node, index) =>(
          <circle r={node.r} cx={node.x} cy={node.y} fill="red" key={index}/>
        ))}
+       {friends.map((friend, index) =>(
+         <image src={friend.image} x="0" y="0" height="50px" width="50px" key={index}/>
+       ))}
      </svg>
+     </div>
    );
  }
 }

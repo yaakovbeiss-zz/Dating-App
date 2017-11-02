@@ -20,12 +20,13 @@ class Welcome extends React.Component {
   }
 
   render() {
+
     return (
       <welcome>
-        Welcome
+        Welcome {this.props.currentUser.first_name}
         <Switch>
           <Route path="/tutorial" component={TutorialScreens} />
-          <Friends nodes={nodes} links={links}/>
+          <Friends nodes={nodes} links={links} friends={this.props.friendships}/>
         </Switch>
       </welcome>
     )
